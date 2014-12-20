@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mimosa Polymer</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <link rel="stylesheet" href="/stylesheets/style.css{{cachebust}}">
+
+  {{#reload}}
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/reload-client.js"></script>
+  {{/reload}}
+
+  <script src="/components/webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="/elements/elements.html">
+
+  {{#optimize}}
+    <script src="/javascripts/main-built.js"></script>
+  {{/optimize}}
+
+  {{^optimize}}
+    <script src="/components/requirejs/require.js" data-main="/javascripts/main.js"></script>
+  {{/optimize}}
+
+</head>
+<body unresolved>
+  <core-header-panel>
+    <core-toolbar>
+      <paper-tabs id="tabs" selected="all" self-end>
+        <paper-tab name="all">All</paper-tab>
+        <paper-tab name="favorites">Favorites</paper-tab>
+      </paper-tabs>
+    </core-toolbar>
+    <div class="container" layout vertical center>
+      <post-list show="all"></post-list>
+    </div>
+  </core-header-panel>
+</body>
+</html>
