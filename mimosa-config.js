@@ -8,7 +8,8 @@ exports.config = {
     "minify-js",
     "minify-css",
     "live-reload",
-    "bower@1.8.1"
+    "bower@1.8.1"//,
+    //"vulcanize"
   ],
   "server": {
     "views": {
