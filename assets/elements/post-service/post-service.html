@@ -1,5 +1,5 @@
-<link rel="import" href="/components/polymer/polymer.html">
-<link rel="import" href="/components/core-ajax/core-ajax.html">
+<link rel="import" href="../../components/polymer/polymer.html">
+<link rel="import" href="../../components/core-ajax/core-ajax.html">
 
 <polymer-element name="post-service" attributes="posts">
   <template>
@@ -11,7 +11,7 @@
 
     <core-ajax id="ajax"
       auto
-      url="posts.json"
+      url="/elements/post-service/posts.json"
       on-core-response="{{postsLoaded}}"
       handleAs="json">
     </core-ajax>
