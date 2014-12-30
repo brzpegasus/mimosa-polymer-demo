@@ -4,7 +4,7 @@ requirejs.config({
   }
 });
 
-require(['jquery'], function() {
+require(['jquery'], function($) {
   $(function() {
     var tabs = document.querySelector('paper-tabs');
     var list = document.querySelector('post-list');

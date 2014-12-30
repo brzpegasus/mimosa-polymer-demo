@@ -7,12 +7,21 @@ exports.config = {
     "require",
     "minify-js",
     "minify-css",
-    "live-reload"
+    "live-reload",
+    "bower@1.8.1"
   ],
   "server": {
     "views": {
       "compileWith": "handlebars",
       "extension": "hbs"
+    }
+  },
+  "bower": {
+    "copy": {
+      "strategy": {
+        "/^(polymer|paper-|core-|font-)/": "together"
+      },
+      "unknownMainFullCopy": true
     }
   },
   "jshint": {
