@@ -7,7 +7,7 @@ This is a port of the [Polymer Starter App](https://www.polymer-project.org/docs
 
 ## Usage
 
-Install Mimosa.
+Install [Mimosa](https://github.com/dbashford/mimosa).
 
 * `npm install -g mimosa`
 
