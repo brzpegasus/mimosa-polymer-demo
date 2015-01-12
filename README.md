@@ -9,26 +9,15 @@ This is a port of the [Polymer Starter App](https://www.polymer-project.org/docs
 
 Install Mimosa and Bower.
 
-```
-npm install -g mimosa
-npm install -g bower
-```
+* `npm install -g mimosa`
 
-Clone the app then execute the following commands.
+Clone the app then execute the following commands from the project root directory:
 
-```
-cd mimosa-polymer-demo
-npm install && bower install
-mimosa watch --server
-```
+* `npm install`
+* `mimosa watch -s`
 
-## Notes
+Navigate to http://localhost:3000/ to view the app.
 
-* Need to figure out a strategy for handling Polymer bower components
-  and dependencies. Given the imports included in the components, the
-  contents of each component need to be located in the same directory,
-  rather than spread across multiple directories based on their types
-  (javascripts, stylesheets, etc.).
-  In its current state, this repo requires that you run `bower install`
-  directly instead of using the `mimosa-bower` module.
-* Need to incorporate Vulcanize into the build process.
+## mimosa-vulcanize
+
+This demo makes use of the [`mimosa-vulcanize`](https://github.com/brzpegasus/mimosa-vulcanize) module to concatenate web component assets when you run an optimized build using `mimosa watch -os` or `mimosa build -o`.
